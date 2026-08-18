@@ -1,0 +1,449 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+<title>Firma de correo UPV (version azul, sin foto, 360 px) - Vicent Giner Bosch</title>
+</head>
+
+<!--
+  ============================================================================
+  FIRMA DE CORREO UPV - version azul, sin foto, 360 px
+  Vicent Giner Bosch (vigibos@eio.upv.es) - v1, agosto de 2026
+
+  Esta es MI firma, no una plantilla generica: lleva mis datos. Se comparte
+  porque las plantillas que distribuye la UPV estan hechas para el Outlook
+  clasico y se descomponen al pegarlas en el editor de firmas del nuevo
+  Outlook. Este archivo esta reconstruido para sobrevivir a ese editor y a
+  los saneadores de HTML de Gmail, Yahoo y los clientes de iOS.
+
+  Instrucciones de adaptacion y de montaje: README.md
+  Los puntos que hay que tocar para reutilizarla van marcados con [CAMBIAR].
+
+  Referencias oficiales de la UPV:
+    - Modelos de firma (documento normativo, PDF):
+      https://www.upv.es/comu/nueva-imagen/recursos/ANEXO_modelos_firmas_correo-UPV.pdf
+    - Plantillas y ayuda del CAU (pensadas para el Outlook clasico):
+      https://wiki.upv.es/confluence/spaces/FAQCAU/pages/598442013/Correo+Identidad+Visual
+    - Gestion de marca e identidad visual corporativa:
+      https://www.upv.es/entidades/acom/gestion-marca-identidad-visual-corporativa-2/
+
+  El grafo de la UPV y el logotipo del DEIOAC son marcas de sus titulares y se
+  usan aqui conforme a la identidad visual corporativa de la UPV.
+  ============================================================================
+-->
+
+<!--
+  ============================================================================
+  NOTAS TECNICAS
+  Basada en ANEXO_modelos_firmas_correo-UPV.pdf: "FIRMA BASE SIN FOTO (360px)"
+  + "PLANTILLA BASE - PERSONAL DE ESCUELAS Y FACULTADES" (logo departamental).
+
+  MEDIDAS TOMADAS DEL PDF OFICIAL (el PDF esta a escala 1:1 en px):
+    - Ancho total ............................. 360 px
+    - Bloque derecho (logos) .................. 140 px, pegado al borde derecho
+    - Logo departamental ...................... max. 140 x 50 px
+    - Grafo UPV ............................... 140 x 49 px
+    - Iconos RS ............................... alto fijo 13 px, max. 5 iconos
+    - Hueco linea de color -> contenido ....... 20 px
+    - Columna derecha: logo dpto. |15,4 px| iconos |26,7 px| grafo UPV
+      (relacion 1 : 1,73; aqui se usa 15 : 25 = 1 : 1,67)
+    - Columna izquierda: los 4 bloques de texto van separados SIEMPRE por la
+      misma distancia; solo el correo y el telefono van mas juntos (~5 px).
+
+  JERARQUIA TIPOGRAFICA DEL PDF OFICIAL (fuente / cuerpo / color medidos):
+    - correo y direccion web ... Helvetica Regular  12 px    #333333
+    - Tel. / Ext. .............. Helvetica Light    11 px    #666666
+    - escuela / departamento ... Helvetica Light    10 px    #4D4D4D
+    - edificio ................. Helvetica Light    12 px    #666666
+    - Universitat Politecnica .. Helvetica Regular  11,14 px #29282B
+    El "destacado" del oficial NO es negrita: es Regular frente a Light, con
+    color mas oscuro. Como Windows/Outlook no tiene Arial Light (Helvetica se
+    sustituye por Arial), aqui el contraste se reproduce con el color:
+    destacados en #333333 / #29282B y secundarios en #666666 / #4D4D4D.
+    - En el PDF, el texto de la izquierda se alinea por ARRIBA con el logo
+      departamental y por ABAJO con la base del grafo UPV. El lado mas alto
+      manda; el otro reparte el sobrante entre sus huecos.
+
+  ARITMETICA DE ESTA FIRMA (en px; 1 px = 0,75 pt):
+    DERECHA (fija, la marcan las imagenes):
+      50 (logo) + 15 (hueco1) + 13 (iconos) + 25 (hueco2) + 49 (grafo) = 152 px
+    IZQUIERDA (suma de alturas de fila):
+      14 (web) + 5 (hueco corto) + 14 (Tel) + 14 (Ext)
+      + 42 (dpto., 3 lineas x 14) + 18 (edificio, icono 15 px) + 26 (UPV, 2x13)
+      = 133 px  +  3 huecos G
+      Alto VISUAL = 133 + 3G - 5,14   (se descuentan 2,57 px arriba y abajo:
+      es el espacio muerto entre el borde de la linea de texto y la altura de
+      mayuscula / la linea base, con line-height 14 px sobre fuente de 12 px)
+    IGUALANDO alto visual izquierdo = 152  ->  G = 8,05  ->  G = 8 px (6 pt)
+      Resultado: izquierda 151,86 px visuales / derecha 152 px (desvio 0,14 px)
+    DESFASE SUPERIOR: la caja de texto empieza 2,57 px por encima de la altura
+      de mayuscula, asi que la celda derecha lleva padding-top de 2,5 px
+      (1,875 pt) para que el logo del DEIOAC arranque a la misma altura visual.
+
+  SI CAMBIA EL CONTENIDO:
+    - Si crece/mengua la IZQUIERDA (mas o menos lineas), recalcular
+      G = (152 - suma_alturas_izquierda + 5,14) / n_huecos, con G >= 5 px.
+    - Si la IZQUIERDA pasara a ser mas alta que 152 px, fijar G = 5 px y
+      repartir el sobrante S de la DERECHA en sus dos huecos manteniendo la
+      proporcion oficial: hueco1 = 0,375 x S_total, hueco2 = 0,625 x S_total,
+      siendo S_total = alto_visual_izquierdo - 112 (50+13+49 de las imagenes).
+    - Las alturas van como height en <tr>/<td>: Word/Outlook las trata como
+      minimos, de modo que si algo no cupiera la fila crece (no se recorta).
+
+  IMAGENES (tamano final, sin reescalar; insertar en Outlook a tamano natural):
+      deioac_gris.png ... 50 x 50 px    gris #808080 (se ve tambien
+                                       sobre fondo oscuro)
+      linkedin.png ...... 13 x 13 px    gris #808080
+      mastodon.png ...... 12 x 13 px    gris #808080
+      github.png ........ 13 x 13 px    gris #808080
+      pin_map_AZ.png .....  9 x 15 px   cian UPV #59CBE8
+      upv_grafo_AZ.png .. 140 x 49 px   cian UPV
+    VERSION AMARILLA: basta sustituir en este archivo pin_map_AZ.png por
+    pin_map_AM.png, upv_grafo_AZ.png por upv_grafo_AM.png y las dos apariciones
+    de #59CBE8 (fila de color, primera fila del cuerpo) por #FFD100.
+  ULTIMO CAMBIO: 17 de agosto de 2026
+    - Retirado el margin-left:7.1pt de las dos tablas, heredado de la plantilla
+      oficial (era una compensacion del exportador de Word para el relleno de
+      las celdas). Sin el, la firma queda a ras del margen del texto del
+      mensaje; antes se desplazaba 9 px a la derecha. No afecta a ninguna
+      medida interna: anchos, huecos y alineaciones se calculan dentro de la
+      tabla.
+
+  ============================================================================
+-->
+
+<body lang=CA link="#0563C1" vlink="#954F72" style='tab-interval:35.4pt;
+-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%'>
+
+<div class=WordSection1 style='page:WordSection1;'>
+
+<!-- ============ Cabecera (nombre + cargo) ============
+     border=0 a proposito: el editor de firmas de Outlook conserva el atributo
+     border=1 pero descarta el "border:none" de los estilos, y entonces pinta
+     el recuadro de cada celda. La linea de color ya no es un border-bottom de
+     esta tabla, sino una fila con fondo de color al principio del cuerpo:
+     un fondo (bgcolor) sobrevive a cualquier saneado de HTML; un borde no. -->
+<!-- Alturas de fila y line-height exactos, cellspacing y padding a cero y
+     <o:p> a 1 px: es la misma tecnica del cuerpo, que es la unica que llega
+     intacta al editor de firmas de Outlook. Con cellspacing/padding de Word,
+     Outlook reparte el espacio a su manera (nombre y cargo se separan de mas
+     y el cargo se pega a la linea de color).
+     Medidas del PDF oficial: nombre -> cargo 17,4 px entre lineas base;
+     cargo -> linea de color 11,6 px. -->
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=360
+ style='mso-tstyle-rowband-size:0;mso-tstyle-colband-size:0;mso-style-noshow:yes;mso-style-priority:99;mso-style-parent:"";mso-para-margin:0cm;mso-para-margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;width:270.0pt;mso-cellspacing:0cm;border:none;
+ mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm;-webkit-text-size-adjust:100%;text-size-adjust:100%'>
+ <!-- [CAMBIAR: nombre] caja de linea de 17 px -->
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:12.75pt'>
+  <td width=360 valign=top style='width:270.0pt;border:none;padding:0cm 0cm 0cm 0cm;height:12.75pt'>
+  <p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:10.5pt;line-height:12.75pt;mso-line-height-rule:exactly;font-family:"Helvetica",sans-serif;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;'><span
+  style='font-size:10.5pt;font-family:"Helvetica",sans-serif;
+  mso-fareast-font-family:"Times New Roman";color:#555555'>Vicent Giner Bosch</span><span
+  style='font-size:1px;line-height:1px'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <!-- [CAMBIAR: cargo] caja de linea de 17 px (lineas base separadas 17 px) -->
+ <tr style='mso-yfti-irow:1;height:12.75pt'>
+  <td width=360 valign=top style='width:270.0pt;border:none;padding:0cm 0cm 0cm 0cm;height:12.75pt'>
+  <p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:9.0pt;line-height:12.75pt;mso-line-height-rule:exactly;font-family:"Helvetica",sans-serif;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;'><b><span
+  style='font-size:9.0pt;font-family:"Helvetica",sans-serif;
+  mso-fareast-font-family:"Times New Roman";color:#5A5A5A'>Professor Titular d&rsquo;Universitat / </span><span
+  lang=EN-GB xml:lang="en-GB" style='font-size:9.0pt;font-family:"Helvetica",sans-serif;
+  mso-fareast-font-family:"Times New Roman";color:#5A5A5A;mso-ansi-language:EN-GB'>Associate Professor</span></b><span
+  style='font-size:1px;line-height:1px'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <!-- hueco cargo -> linea de color: 7 px (deja 11,6 px desde la linea base) -->
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes;height:5.25pt'>
+  <td width=360 style='width:270.0pt;border:none;padding:0cm 0cm 0cm 0cm;
+  height:5.25pt;font-size:1px;line-height:1px;mso-line-height-rule:exactly'><span style='font-size:5.25pt;line-height:5.25pt;mso-line-height-rule:exactly;-webkit-text-size-adjust:100%;text-size-adjust:100%'>&nbsp;</span></td>
+ </tr>
+</table>
+
+<!-- separador tecnico entre tablas (oculto en Outlook y en navegador) -->
+<p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;font-variant-ligatures: normal;font-variant-caps: normal;
+orphans: 2;text-align:start;widows: 2;-webkit-text-stroke-width: 0px;
+text-decoration-thickness: initial;text-decoration-style: initial;text-decoration-color: initial;
+word-spacing:0px'><span style='display:none;mso-hide:all'><o:p>&nbsp;</o:p></span></p>
+
+<!-- ============ Cuerpo: izquierda (contacto) | separacion | derecha (logos) ============
+     Columnas 170 | 50 | 140 = 360 px. El bloque de logos ocupa exactamente los
+     140 px oficiales y queda pegado al borde derecho, sin necesidad de floats. -->
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=360
+ style='mso-tstyle-rowband-size:0;mso-tstyle-colband-size:0;mso-style-noshow:yes;mso-style-priority:99;mso-style-parent:"";mso-para-margin:0cm;mso-para-margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;width:270.0pt;mso-cellspacing:0cm;mso-yfti-tbllook:1184;
+ mso-padding-alt:0cm 0cm 0cm 0cm;orphans: 2;widows: 2;-webkit-text-stroke-width: 0px;
+ text-decoration-thickness: initial;text-decoration-style: initial;text-decoration-color: initial;
+ word-spacing:0px'>
+ <!-- Fila 0: LINEA DE COLOR UPV (2 px). Va como fondo de celda, no como borde,
+      para que sobreviva al copiar y pegar en el editor de firmas de Outlook.
+      Version amarilla: cambiar #59CBE8 por #FFD100 en los dos sitios. -->
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:1.5pt'>
+  <td colspan=3 width=360 bgcolor="#59CBE8" style='width:270.0pt;background:#59CBE8;
+  padding:0cm 0cm 0cm 0cm;height:1.5pt;font-size:1px;line-height:1px;
+  mso-line-height-rule:exactly'><span style='font-size:1.5pt;line-height:1.5pt;mso-line-height-rule:exactly;-webkit-text-size-adjust:100%;text-size-adjust:100%'>&nbsp;</span></td>
+ </tr>
+ <!-- Fila 1: fija los anchos de columna Y aporta el hueco oficial de 20 px
+      con un &nbsp; de 13,125 pt (no con un height, que Yahoo descarta)
+      entre la linea de color y el contenido (17,5 px aqui + 2,5 px de desfase). -->
+ <tr style='mso-yfti-irow:1;height:13.125pt'>
+  <td width=170 style='width:127.5pt;padding:0cm 0cm 0cm 0cm;height:13.125pt;
+  font-size:13.125pt;line-height:13.125pt;mso-line-height-rule:exactly'>
+  <p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:13.125pt;line-height:13.125pt;mso-line-height-rule:exactly;font-family:"Calibri",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;'><span
+  style='font-size:13.125pt;line-height:13.125pt;font-family:"Helvetica",sans-serif;color:black'><u1:p></u1:p>&nbsp;</span><span
+  style='font-size:1px;line-height:1px;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=50 style='width:37.5pt;padding:0cm 0cm 0cm 0cm;height:13.125pt;
+  font-size:13.125pt;line-height:13.125pt;mso-line-height-rule:exactly'>
+  <p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:13.125pt;line-height:13.125pt;mso-line-height-rule:exactly;font-family:"Calibri",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;'><span
+  style='font-size:13.125pt;line-height:13.125pt;font-family:"Times New Roman",serif'><u1:p></u1:p>&nbsp;</span><span
+  style='font-size:1px;line-height:1px;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=140 style='width:105.0pt;padding:0cm 0cm 0cm 0cm;height:13.125pt;
+  font-size:13.125pt;line-height:13.125pt;mso-line-height-rule:exactly'>
+  <p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:13.125pt;line-height:13.125pt;mso-line-height-rule:exactly;font-family:"Calibri",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;'><span
+  style='font-size:13.125pt;line-height:13.125pt;font-family:"Times New Roman",serif;color:blue'><u1:p></u1:p>&nbsp;</span><span
+  style='font-size:1px;line-height:1px;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <!-- Fila 2: contenido -->
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+
+  <!-- ---------- COLUMNA IZQUIERDA: datos de contacto (alto total 157 px) ---------- -->
+  <td width=170 valign=top style='width:127.5pt;padding:0cm 0cm 0cm 0cm'>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=170
+   style='mso-tstyle-rowband-size:0;mso-tstyle-colband-size:0;mso-style-noshow:yes;mso-style-priority:99;mso-style-parent:"";mso-para-margin:0cm;mso-para-margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;width:127.5pt;mso-cellspacing:0cm;mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm;-webkit-text-size-adjust:100%;text-size-adjust:100%'>
+   <!-- [CAMBIAR: web o correo] (14 px). Ocupa el lugar que la norma da al correo.
+        Destacada: color #333333, como en el PDF oficial, donde la web va en
+        Helvetica Regular sobre el resto del bloque en Helvetica Light. -->
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:10.5pt'>
+    <td width=170 valign=top style='width:127.5pt;padding:0cm 0cm 0cm 0cm;height:10.5pt'>
+    <p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:9.0pt;line-height:10.5pt;mso-line-height-rule:exactly;font-family:"Helvetica",sans-serif;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;'><a
+    href="https://vigibos.webs.upv.es/" target="_blank" title="Web de Vicent Giner Bosch" style='text-decoration:none;text-underline:none'><span
+    style='font-size:9.0pt;font-family:"Helvetica",sans-serif;color:#333333;
+    text-decoration:none;text-underline:none;white-space:nowrap'>vigibos.webs.upv.es</span></a><span
+    style='font-size:1px;line-height:1px'><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <!-- hueco web -> telefono: 5 px (el unico hueco "corto", como en el PDF) -->
+   <tr style='mso-yfti-irow:1;height:3.75pt'>
+    <td width=170 style='width:127.5pt;padding:0cm 0cm 0cm 0cm;height:3.75pt;
+    font-size:1px;line-height:1px;mso-line-height-rule:exactly'><span style='font-size:3.75pt;line-height:3.75pt;mso-line-height-rule:exactly;-webkit-text-size-adjust:100%;text-size-adjust:100%'>&nbsp;</span></td>
+   </tr>
+   <!-- [CAMBIAR: telefono] (14 px) -->
+   <tr style='mso-yfti-irow:2;height:10.5pt'>
+    <td width=170 valign=top style='width:127.5pt;padding:0cm 0cm 0cm 0cm;height:10.5pt'>
+    <p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:9.0pt;line-height:10.5pt;mso-line-height-rule:exactly;font-family:"Helvetica",sans-serif;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;'><span
+    style='font-size:9.0pt;font-family:"Helvetica",sans-serif;color:#666666;white-space:nowrap'>Tel.
+    +34&nbsp;96&nbsp;387&nbsp;00&nbsp;00</span><span style='font-size:1px;
+    line-height:1px'><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <!-- [CAMBIAR: extension] (14 px, misma unidad visual que el telefono) -->
+   <tr style='mso-yfti-irow:3;height:10.5pt'>
+    <td width=170 valign=top style='width:127.5pt;padding:0cm 0cm 0cm 0cm;height:10.5pt'>
+    <p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:9.0pt;line-height:10.5pt;mso-line-height-rule:exactly;font-family:"Helvetica",sans-serif;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;'><span
+    style='font-size:9.0pt;font-family:"Helvetica",sans-serif;color:#666666;white-space:nowrap'>Ext.
+    74913</span><span style='font-size:1px;line-height:1px'><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <!-- hueco G = 8 px -->
+   <tr style='mso-yfti-irow:4;height:6.0pt'>
+    <td width=170 style='width:127.5pt;padding:0cm 0cm 0cm 0cm;height:6.0pt;
+    font-size:1px;line-height:1px;mso-line-height-rule:exactly'><span style='font-size:6.0pt;line-height:6.0pt;mso-line-height-rule:exactly;-webkit-text-size-adjust:100%;text-size-adjust:100%'>&nbsp;</span></td>
+   </tr>
+   <!-- [CAMBIAR: unidad] (3 lineas x 14 px = 42 px). Si ocupa mas o menos
+        lineas hay que recalcular la altura de esta fila y el hueco G: ver el
+        apartado "SI CAMBIA EL CONTENIDO" de estas notas y el README. -->
+   <tr style='mso-yfti-irow:5;height:31.5pt'>
+    <td width=170 valign=top style='width:127.5pt;padding:0cm 0cm 0cm 0cm;height:31.5pt'>
+    <p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:9.0pt;line-height:10.5pt;mso-line-height-rule:exactly;font-family:"Helvetica",sans-serif;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;'><span
+    style='font-size:9.0pt;font-family:"Helvetica",sans-serif;color:#4D4D4D'>Dep.
+    d&rsquo;Estad&iacute;stica i&nbsp;Investigaci&oacute;&nbsp;Operativa Aplicades i&nbsp;Qualitat</span><span
+    style='font-size:1px;line-height:1px'><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <!-- hueco G = 8 px -->
+   <tr style='mso-yfti-irow:6;height:6.0pt'>
+    <td width=170 style='width:127.5pt;padding:0cm 0cm 0cm 0cm;height:6.0pt;
+    font-size:1px;line-height:1px;mso-line-height-rule:exactly'><span style='font-size:6.0pt;line-height:6.0pt;mso-line-height-rule:exactly;-webkit-text-size-adjust:100%;text-size-adjust:100%'>&nbsp;</span></td>
+   </tr>
+   <!-- [CAMBIAR: edificio y enlace al plano] chincheta de 9 x 15 px (18 px) -->
+   <tr style='mso-yfti-irow:7;height:13.5pt'>
+    <td width=170 valign=top style='width:127.5pt;padding:0cm 0cm 0cm 0cm;height:13.5pt'>
+    <p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:9.0pt;line-height:10.5pt;font-family:"Helvetica",sans-serif;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;'><span
+    style='font-size:9.0pt;font-family:"Helvetica",sans-serif;mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+     id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+     path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+     <v:stroke joinstyle="miter"/>
+     <v:formulas>
+      <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+      <v:f eqn="sum @0 1 0"/>
+      <v:f eqn="sum 0 0 @1"/>
+      <v:f eqn="prod @2 1 2"/>
+      <v:f eqn="prod @3 21600 pixelWidth"/>
+      <v:f eqn="prod @3 21600 pixelHeight"/>
+      <v:f eqn="sum @0 0 1"/>
+      <v:f eqn="prod @6 1 2"/>
+      <v:f eqn="prod @7 21600 pixelWidth"/>
+      <v:f eqn="sum @8 21600 0"/>
+      <v:f eqn="prod @7 21600 pixelHeight"/>
+      <v:f eqn="sum @10 21600 0"/>
+     </v:formulas>
+     <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+     <o:lock v:ext="edit" aspectratio="t"/>
+    </v:shapetype><v:shape id="Imagen_x0020_1" o:spid="_x0000_i1025" type="#_x0000_t75"
+     alt="mapa UPV" style='width:6.75pt;height:11.25pt;visibility:visible;
+     mso-wrap-style:square'>
+     <v:imagedata src="A_UPV_no_foto_azul_VGB_archivos/pin_map_AZ.png" o:title="mapa UPV"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=9 height=15
+    src="A_UPV_no_foto_azul_VGB_archivos/pin_map_AZ.png" alt="mapa UPV" v:shapes="Imagen_x0020_1"><![endif]></span><span
+    style='font-size:9.0pt;font-family:"Helvetica",sans-serif;color:#666666'>&nbsp;<a
+    href="https://openmaps.upv.es/index.php?locate=V.7A.3.019" target="_blank" title="Despatx 3.019" style='text-decoration:none;text-underline:none'><span
+    style='font-size:9.0pt;font-family:"Helvetica",sans-serif;color:#666666;
+    text-decoration:none;text-underline:none'>Edifici&nbsp;7A</span></a></span><span
+    style='font-size:1px;line-height:1px'><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <!-- hueco G = 8 px -->
+   <tr style='mso-yfti-irow:8;height:6.0pt'>
+    <td width=170 style='width:127.5pt;padding:0cm 0cm 0cm 0cm;height:6.0pt;
+    font-size:1px;line-height:1px;mso-line-height-rule:exactly'><span style='font-size:6.0pt;line-height:6.0pt;mso-line-height-rule:exactly;-webkit-text-size-adjust:100%;text-size-adjust:100%'>&nbsp;</span></td>
+   </tr>
+   <!-- universidad (2 lineas x 13 px = 26 px). Su linea base cierra la firma. -->
+   <tr style='mso-yfti-irow:9;mso-yfti-lastrow:yes;height:19.5pt'>
+    <td width=170 valign=top style='width:127.5pt;padding:0cm 0cm 0cm 0cm;height:19.5pt'>
+    <p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:8.5pt;line-height:9.75pt;mso-line-height-rule:exactly;font-family:"Helvetica",sans-serif;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;'><span
+    style='font-size:8.5pt;font-family:"Helvetica",sans-serif;color:#29282B'>Universitat Polit&egrave;cnica<br>
+    de Val&egrave;ncia</span><span style='font-size:1px;line-height:1px'><o:p></o:p></span></p>
+    </td>
+   </tr>
+  </table>
+  </td>
+
+  <!-- ---------- COLUMNA SEPARADORA (50 px) ---------- -->
+  <td width=50 style='width:37.5pt;padding:0cm 0cm 0cm 0cm'><span style='font-size:1px;line-height:1px'>&nbsp;</span></td>
+
+  <!-- ---------- COLUMNA DERECHA: logo dpto. + iconos RS + grafo UPV ----------
+       padding-top de 1,875 pt (2,5 px) para que la parte superior del logo
+       coincida con la altura de mayuscula de la primera linea de la izquierda. -->
+  <td width=140 valign=top style='width:105.0pt;padding:1.875pt 0cm 0cm 0cm'>
+  <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=140
+   style='mso-tstyle-rowband-size:0;mso-tstyle-colband-size:0;mso-style-noshow:yes;mso-style-priority:99;mso-style-parent:"";mso-para-margin:0cm;mso-para-margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;width:105.0pt;mso-cellspacing:0cm;mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm;-webkit-text-size-adjust:100%;text-size-adjust:100%'>
+   <!-- [CAMBIAR: logotipo de tu unidad] (max. 140 x 50 px), a la izquierda -->
+   <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:37.5pt'>
+    <td colspan=4 width=140 align=left valign=top style='width:105.0pt;padding:0cm 0cm 0cm 0cm;
+    height:37.5pt;text-align:left'>
+    <p class=MsoNormal align=left style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:1px;line-height:1px;font-family:"Calibri",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;text-align:left'><span
+    style='font-size:1px;line-height:1px;mso-no-proof:yes'><a href="http://www.upv.es/entidades/DEIO/" target="_blank" title="DEIOAC" style='text-decoration:none;text-underline:none'><span
+    style='text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shape
+     id="Imagen_x0020_2" o:spid="_x0000_i1026" type="#_x0000_t75" alt="DEIOAC"
+     style='width:37.5pt;height:37.5pt;visibility:visible;mso-wrap-style:square'>
+     <v:imagedata src="A_UPV_no_foto_azul_VGB_archivos/deioac_gris.png" o:title="DEIOAC"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=50 height=50
+    src="A_UPV_no_foto_azul_VGB_archivos/deioac_gris.png" alt="DEIOAC" v:shapes="Imagen_x0020_2"><![endif]></span></a></span><span
+    style='font-size:1px;line-height:1px'><o:p></o:p></span></p>
+    </td>
+   </tr>
+   <!-- hueco logo -> iconos: 15 px (oficial 15,4 px) -->
+   <tr style='mso-yfti-irow:1;height:11.25pt'>
+    <td width=35 style='width:26.25pt;padding:0cm 0cm 0cm 0cm;height:11.25pt;font-size:1px;line-height:1px;mso-line-height-rule:exactly'><span style='font-size:11.25pt;line-height:11.25pt;mso-line-height-rule:exactly;-webkit-text-size-adjust:100%;text-size-adjust:100%'>&nbsp;</span></td>
+    <td width=35 style='width:26.25pt;padding:0cm 0cm 0cm 0cm;height:11.25pt;font-size:1px;line-height:1px;mso-line-height-rule:exactly'><span style='font-size:11.25pt;line-height:11.25pt;mso-line-height-rule:exactly;-webkit-text-size-adjust:100%;text-size-adjust:100%'>&nbsp;</span></td>
+    <td width=35 style='width:26.25pt;padding:0cm 0cm 0cm 0cm;height:11.25pt;font-size:1px;line-height:1px;mso-line-height-rule:exactly'><span style='font-size:11.25pt;line-height:11.25pt;mso-line-height-rule:exactly;-webkit-text-size-adjust:100%;text-size-adjust:100%'>&nbsp;</span></td>
+    <td width=35 style='width:26.25pt;padding:0cm 0cm 0cm 0cm;height:11.25pt;font-size:1px;line-height:1px;mso-line-height-rule:exactly'><span style='font-size:11.25pt;line-height:11.25pt;mso-line-height-rule:exactly;-webkit-text-size-adjust:100%;text-size-adjust:100%'>&nbsp;</span></td>
+   </tr>
+   <!-- [CAMBIAR: iconos y enlaces] alto fijo 13 px (norma UPV), separados 35 px.
+        Tres iconos: LinkedIn | Mastodon | GitHub (la web ya figura como texto). -->
+   <tr style='mso-yfti-irow:2;height:9.75pt'>
+    <td width=35 valign=top style='width:26.25pt;padding:0cm 0cm 0cm 0cm;height:9.75pt'>
+    <p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:1px;line-height:1px;font-family:"Calibri",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;'><span
+    style='font-size:1px;line-height:1px;mso-no-proof:yes'><a href="https://www.linkedin.com/in/vginer" target="_blank" title="LinkedIn" style='text-decoration:none;text-underline:none'><span
+    style='text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shape
+     id="Imagen_x0020_4" o:spid="_x0000_i1028" type="#_x0000_t75" alt="LinkedIn"
+     style='width:9.75pt;height:9.75pt;visibility:visible;mso-wrap-style:square'>
+     <v:imagedata src="A_UPV_no_foto_azul_VGB_archivos/linkedin.png" o:title="LinkedIn"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=13 height=13
+    src="A_UPV_no_foto_azul_VGB_archivos/linkedin.png" alt="LinkedIn" v:shapes="Imagen_x0020_4"><![endif]></span></a></span><span
+    style='font-size:1px;line-height:1px'><o:p></o:p></span></p>
+    </td>
+    <td width=35 valign=top style='width:26.25pt;padding:0cm 0cm 0cm 0cm;height:9.75pt'>
+    <p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:1px;line-height:1px;font-family:"Calibri",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;'><span
+    style='font-size:1px;line-height:1px;mso-no-proof:yes'><a href="https://mathstodon.xyz/@vginer_upv" target="_blank" title="Mastodon" style='text-decoration:none;text-underline:none'><span
+    style='text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shape
+     id="Imagen_x0020_5" o:spid="_x0000_i1029" type="#_x0000_t75" alt="Mastodon"
+     style='width:9.0pt;height:9.75pt;visibility:visible;mso-wrap-style:square'>
+     <v:imagedata src="A_UPV_no_foto_azul_VGB_archivos/mastodon.png" o:title="Mastodon"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=12 height=13
+    src="A_UPV_no_foto_azul_VGB_archivos/mastodon.png" alt="Mastodon" v:shapes="Imagen_x0020_5"><![endif]></span></a></span><span
+    style='font-size:1px;line-height:1px'><o:p></o:p></span></p>
+    </td>
+    <td width=35 valign=top style='width:26.25pt;padding:0cm 0cm 0cm 0cm;height:9.75pt'>
+    <p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:1px;line-height:1px;font-family:"Calibri",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;'><span
+    style='font-size:1px;line-height:1px;mso-no-proof:yes'><a href="https://github.com/vginer" target="_blank" title="GitHub" style='text-decoration:none;text-underline:none'><span
+    style='text-decoration:none;text-underline:none'><!--[if gte vml 1]><v:shape
+     id="Imagen_x0020_6" o:spid="_x0000_i1030" type="#_x0000_t75" alt="GitHub"
+     style='width:9.75pt;height:9.75pt;visibility:visible;mso-wrap-style:square'>
+     <v:imagedata src="A_UPV_no_foto_azul_VGB_archivos/github.png" o:title="GitHub"/>
+    </v:shape><![endif]--><![if !vml]><img border=0 width=13 height=13
+    src="A_UPV_no_foto_azul_VGB_archivos/github.png" alt="GitHub" v:shapes="Imagen_x0020_6"><![endif]></span></a></span><span
+    style='font-size:1px;line-height:1px'><o:p></o:p></span></p>
+    </td>
+    <!-- celda vacia: mantiene los 140 px de ancho del bloque con solo 3 iconos -->
+    <td width=35 style='width:26.25pt;padding:0cm 0cm 0cm 0cm;height:9.75pt;
+    font-size:1px;line-height:1px;mso-line-height-rule:exactly'><span style='font-size:9.75pt;line-height:9.75pt;mso-line-height-rule:exactly;-webkit-text-size-adjust:100%;text-size-adjust:100%'>&nbsp;</span></td>
+   </tr>
+   <!-- hueco iconos -> grafo UPV: 25 px (oficial 26,7 px; relacion 15:25 = 1,2:2) -->
+   <tr style='mso-yfti-irow:3;height:18.75pt'>
+    <td width=35 style='width:26.25pt;padding:0cm 0cm 0cm 0cm;height:18.75pt;font-size:1px;line-height:1px;mso-line-height-rule:exactly'><span style='font-size:18.75pt;line-height:18.75pt;mso-line-height-rule:exactly;-webkit-text-size-adjust:100%;text-size-adjust:100%'>&nbsp;</span></td>
+    <td width=35 style='width:26.25pt;padding:0cm 0cm 0cm 0cm;height:18.75pt;font-size:1px;line-height:1px;mso-line-height-rule:exactly'><span style='font-size:18.75pt;line-height:18.75pt;mso-line-height-rule:exactly;-webkit-text-size-adjust:100%;text-size-adjust:100%'>&nbsp;</span></td>
+    <td width=35 style='width:26.25pt;padding:0cm 0cm 0cm 0cm;height:18.75pt;font-size:1px;line-height:1px;mso-line-height-rule:exactly'><span style='font-size:18.75pt;line-height:18.75pt;mso-line-height-rule:exactly;-webkit-text-size-adjust:100%;text-size-adjust:100%'>&nbsp;</span></td>
+    <td width=35 style='width:26.25pt;padding:0cm 0cm 0cm 0cm;height:18.75pt;font-size:1px;line-height:1px;mso-line-height-rule:exactly'><span style='font-size:18.75pt;line-height:18.75pt;mso-line-height-rule:exactly;-webkit-text-size-adjust:100%;text-size-adjust:100%'>&nbsp;</span></td>
+   </tr>
+   <!-- grafo UPV (140 x 49 px). Su base cierra la firma por abajo. -->
+   <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes;height:36.75pt'>
+    <td colspan=4 width=140 valign=top style='width:105.0pt;padding:0cm 0cm 0cm 0cm;height:36.75pt'>
+    <p class=MsoNormal style='margin:0cm;margin-bottom:.0001pt;mso-pagination:widow-orphan;font-size:1px;line-height:1px;font-family:"Calibri",sans-serif;mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-fareast-theme-font:minor-fareast;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:minor-bidi;'><a
+    href="https://www.upv.es/" target="_blank" title="UPV. Cam&iacute; de Vera, s/n. 46022 Valencia, SPAIN" style='text-decoration:none;text-underline:none'><span
+    style='font-size:1px;line-height:1px;mso-no-proof:yes;text-decoration:none;
+    text-underline:none'><!--[if gte vml 1]><v:shape
+     id="Imagen_x0020_7" o:spid="_x0000_i1031" type="#_x0000_t75" alt="UPV"
+     href="https://www.upv.es/" style='width:105.0pt;height:36.75pt;visibility:visible;
+     mso-wrap-style:square' o:button="t">
+     <v:imagedata src="A_UPV_no_foto_azul_VGB_archivos/upv_grafo_AZ.png" o:title="UPV"/>
+    </v:shape><![endif]--><![if !vml]><span style='mso-ignore:vglayout'><img
+    border=0 width=140 height=49 src="A_UPV_no_foto_azul_VGB_archivos/upv_grafo_AZ.png"
+    alt=UPV v:shapes="Imagen_x0020_7"></span><![endif]></span></a><span
+    style='font-size:1px;line-height:1px'><o:p></o:p></span></p>
+    </td>
+   </tr>
+  </table>
+  </td>
+
+ </tr>
+</table>
+
+<!-- Sin parrafos vacios al final: la plantilla de Word arrastraba dos, que en
+     el editor de firmas se convierten en lineas en blanco bajo la firma. Si
+     alguna vez quieres separacion, es mejor anadirla en el propio Outlook. -->
+
+</div>
+
+</body>
+
+</html>
