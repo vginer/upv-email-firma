@@ -1,4 +1,16 @@
-# Firma de correo UPV para el **nuevo Outlook**
+# upv-email-firma. Firma de correo UPV para el nuevo Outlook
+
+<!-- Si el usuario o el nombre del repositorio no coinciden, ajústalos en las
+     URLs de las pastillas. El color 59CBE8 es el cian corporativo de la
+     UPV. -->
+
+[![Último cambio](https://img.shields.io/github/last-commit/vginer/upv-email-firma?label=%C3%BAltimo%20cambio&color=59CBE8)](https://github.com/vginer/upv-email-firma/commits)
+![Versión](https://img.shields.io/badge/versi%C3%B3n-v1-59CBE8)
+![Estado](https://img.shields.io/badge/estado-estable-59CBE8)
+![Probado en](https://img.shields.io/badge/probado%20en-Outlook%20%C2%B7%20Gmail%20%C2%B7%20Yahoo%20%C2%B7%20iOS-59CBE8)
+![Ancho](https://img.shields.io/badge/ancho-360%20px-59CBE8)
+![Hecho con](https://img.shields.io/badge/hecho%20con-Claude%20Opus%205-59CBE8)
+[![Licencia](https://img.shields.io/badge/licencia-CC%20BY%204.0-59CBE8)](https://creativecommons.org/licenses/by/4.0/deed.es)
 
 Firma de correo electrónico conforme a la identidad visual de la Universitat
 Politècnica de València, reconstruida para que sobreviva al editor de firmas
@@ -53,11 +65,12 @@ natural. No las reescales.
 | `pin_map_AZ.png` | 9 × 15 px | cian UPV `#59CBE8` | chincheta del edificio |
 | `upv_grafo_AZ.png` | 140 × 49 px | cian UPV | grafo de la UPV |
 
-El logotipo de la unidad va en **gris y no en negro** a propósito: un logotipo
-negro sobre transparente desaparece cuando el destinatario lee con el tema
-oscuro, porque los clientes invierten el texto pero nunca tocan los píxeles de
-una imagen. El gris `#808080` se lee sobre fondo claro y sobre fondo oscuro, y
-además es el mismo gris de los iconos.
+El logotipo de la unidad (mi departamento, en este caso) va en **gris y no en
+negro** a propósito: un logotipo negro sobre transparente prácticamente
+desaparece cuando el destinatario lee con el tema oscuro, porque los clientes
+invierten el texto pero nunca tocan los píxeles de una imagen. El gris
+`#808080` se lee sobre fondo claro y sobre fondo oscuro, y además es el mismo
+gris de los iconos.
 
 Para la versión amarilla bastan `pin_map_AM.png` y `upv_grafo_AM.png`, y
 cambiar en el HTML las dos apariciones de `#59CBE8` por `#FFD100`.
@@ -70,11 +83,12 @@ Abre el `.htm` en un editor de texto y busca las marcas `[CAMBIAR]`. Son diez:
 
 1. **Nombre** (10,5 pt, `#555555`).
 2. **Cargo** (9 pt negrita, `#5A5A5A`).
-3. **Web o correo** (9 pt, `#333333`) — la norma pone aquí el correo; yo prefiero
-   la web, porque quien recibe un correo mío ya sabe mi dirección.
+3. **Web o correo** (9 pt, `#333333`) — la norma pone aquí el correo; yo
+   prefiero la web, porque quien recibe un correo mío ya sabe mi dirección.
 4. **Teléfono** y 5. **extensión** (9 pt, `#666666`).
 6. **Unidad** (9 pt, `#4D4D4D`).
-7. **Edificio** y enlace al plano (9 pt, `#666666`).
+7. **Edificio** y enlace al plano (9 pt, `#666666`). Puedes eliminar el enlace
+   si quieres. A mí me parecía útil proporcionar esa información como link.
 8. **Logotipo de la unidad**, 9. **iconos y enlaces** de redes sociales.
 10. **Universitat Politècnica de València** (8,5 pt, `#29282B`) — no se cambia.
 
@@ -108,7 +122,7 @@ encima de la altura de mayúscula y por debajo de la línea base. Si añades o
 quitas líneas, recalcula:
 
 ```
-G = (152 − suma de alturas de la izquierda + 5,14) / número de huecos     (G ≥ 5 px)
+G = (152 − suma alturas izquierda + 5,14) / número de huecos    (G ≥ 5 px)
 ```
 
 y escribe el resultado en las tres filas separadoras (`height` en puntos, que
@@ -136,10 +150,11 @@ enlazar. Por eso se hace en dos pasadas.
    bien; en el lugar de cada imagen aparece un marcador de imagen rota con su
    texto alternativo: *DEIOAC*, *LinkedIn*, *Mastodon*, *GitHub*, *UPV* y
    *mapa UPV*. Son seis.
-5. **Primera pasada, las imágenes.** Para cada marcador: bórralo, deja el cursor
-   en su sitio e inserta la imagen con el botón de imagen del editor. Elige el
-   archivo de la carpeta `A_UPV_no_foto_azul_VGB_archivos`. **No la
-   redimensiones**: ya viene al tamaño correcto.
+5. **Primera pasada, las imágenes.** Para cada marcador de imagen rota: deja el
+   cursor en su sitio (no es necesario borrar el marcador) e inserta la imagen
+   con el botón de imagen del editor. Elige el archivo de la carpeta
+   `A_UPV_no_foto_azul_VGB_archivos`. **No la redimensiones**: ya viene al
+   tamaño correcto.
 6. **Segunda pasada, los enlaces.** Con las seis imágenes ya colocadas,
    selecciona cada una con un clic y pulsa el botón de enlace (o `Ctrl+K`), pega
    la dirección y acepta:
@@ -161,8 +176,9 @@ enlazar. Por eso se hace en dos pasadas.
      cliente se ha comido los separadores);
    - al pasar el ratón por cada imagen aparece su enlace.
 
-Los textos emergentes (`title`) de los enlaces se pierden por el camino. No hay
-forma de conservarlos desde el editor; tampoco se echan de menos.
+Los textos emergentes (`title`) de los enlaces (asociados a las etiquetas `A`
+del código HTML) se pierden por el camino. No hay forma de conservarlos desde
+el editor; tampoco es una gran pérdida.
 
 ---
 
@@ -177,10 +193,11 @@ La norma admite **hasta cinco iconos**, de **13 px de alto fijo**.
 3. Ajusta el lienzo al contenido y escala a **13 px de alto**, manteniendo la
    proporción. El ancho es libre: los iconos no tienen por qué ser cuadrados
    (el de Mastodon de esta firma mide 12 × 13).
-4. Activa el ajuste a la rejilla de píxeles antes de exportar. A 13 px, un trazo
-   mal alineado se convierte en dos medios píxeles grises y el icono se ve sucio.
-5. Exporta a **PNG con transparencia, a 1×** (13 px de alto exactos). No exportes
-   grande y reduzcas después: ahí es donde se pierde la definición.
+4. Activa el ajuste a la rejilla de píxeles antes de exportar. A 13 px, un
+   trazo mal alineado se convierte en dos medios píxeles grises y el icono se
+   ve sucio.
+5. Exporta a **PNG con transparencia, a 1×** (13 px de alto exactos). No
+   exportes grande y reduzcas después: ahí es donde se pierde la definición.
 
 Para añadirlo al HTML, duplica uno de los bloques `<td>` de icono y cambia
 `src`, `alt`, `width`, `height`, el `href` y las medidas del bloque VML (en
@@ -230,7 +247,8 @@ Por si a alguien le sirve para depurar su propia firma:
   todas las celdas.
 - **Los separadores llevan dentro un `&nbsp;` con `font-size` y `line-height`
   iguales a la altura del hueco.** Una celda vacía con solo `height` colapsa en
-  Yahoo. La altura tiene que venir del contenido.
+  Yahoo (y quizás también en otros clientes). La altura tiene que venir del
+  contenido.
 - **Las alturas van como `height` en `<tr>` y `<td>`**, que Word trata como
   mínimos: si algo no cupiera, la fila crece en lugar de recortar.
 - **Sin párrafos vacíos al final**, que en el editor se convierten en líneas en
@@ -250,4 +268,15 @@ El código HTML de este repositorio se comparte bajo licencia
 de ningún tipo. Los iconos de redes sociales proceden de sus respectivas
 marcas.
 
-Vicent Giner Bosch — Universitat Politècnica de València
+## Cómo se hizo
+
+La reconstrucción del HTML, las mediciones sobre el documento normativo y la
+depuración cliente por cliente se hicieron con la ayuda de **Claude (Opus 5)**,
+de Anthropic, a lo largo de una serie de sesiones de trabajo en agosto de 2026.
+Las medidas que aparecen en este README —los tamaños del PDF oficial, los
+colores que devuelve cada cliente en modo oscuro, las desviaciones en iOS— no
+son estimaciones: salieron de medir píxel a píxel los renders y las capturas de
+las pruebas. Las decisiones de contenido y el criterio final son míos.
+
+[Vicent Giner Bosch](https://vigibos.webs.upv.es) — Universitat Politècnica de
+València
