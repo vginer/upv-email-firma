@@ -63,7 +63,9 @@ w\:* {behavior:url(#default#VML);}
     - Iconos RS ............................... alto fijo 13 px, max. 5 iconos
     - Hueco linea de color -> contenido ....... 20 px
     - Columna derecha: logo dpto. |15,4 px| iconos |26,7 px| grafo UPV
-      (relacion 1 : 1,73; aqui se usa 15 : 25 = 1 : 1,67)
+      (aqui se usa 15 y 25). El segundo hueco es FIJO: 25-30 px en todos los
+      modelos medidos. El primero es el que absorbe el sobrante y va de 15,4 px
+      (logotipo de 50 px de alto) a 43,4 px (logotipo de 19,6 px).
     - Columna izquierda: los 4 bloques de texto van separados SIEMPRE por la
       misma distancia; solo el correo y el telefono van mas juntos (~5 px).
 
@@ -100,10 +102,13 @@ w\:* {behavior:url(#default#VML);}
   SI CAMBIA EL CONTENIDO:
     - Si crece/mengua la IZQUIERDA (mas o menos lineas), recalcular
       G = (152 - suma_alturas_izquierda + 5,14) / n_huecos, con G >= 5 px.
-    - Si la IZQUIERDA pasara a ser mas alta que 152 px, fijar G = 5 px y
-      repartir el sobrante S de la DERECHA en sus dos huecos manteniendo la
-      proporcion oficial: hueco1 = 0,375 x S_total, hueco2 = 0,625 x S_total,
-      siendo S_total = alto_visual_izquierdo - 112 (50+13+49 de las imagenes).
+    - Si la IZQUIERDA pasara a ser mas alta, NO tocar el hueco iconos->grafo:
+      medido sobre el PDF, en todos los modelos con logotipo se mantiene entre
+      25 y 30 px. El sobrante va INTEGRO al hueco logotipo->iconos, que en la
+      norma va de 15,4 px (logotipo de 50 px) a 43,4 px (logotipo de 19,6 px).
+      Es decir: logotipo pegado arriba, grafo pegado abajo, iconos a unos 27 px
+      del grafo, y el aire sobrante entre logotipo e iconos:
+      hueco1 = alto_visual_izquierdo - alto_logotipo - 13 - 27 - 49.
     - Las alturas van como height en <tr>/<td>: Word/Outlook las trata como
       minimos, de modo que si algo no cupiera la fila crece (no se recorta).
 
