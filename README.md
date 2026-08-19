@@ -5,10 +5,8 @@
      UPV. -->
 
 [![Último cambio](https://img.shields.io/github/last-commit/vginer/upv-email-firma?label=%C3%BAltimo%20cambio&color=59CBE8)](https://github.com/vginer/upv-email-firma/commits)
-![Versión](https://img.shields.io/badge/versi%C3%B3n-v1-59CBE8)
+[![Versión](https://img.shields.io/badge/versi%C3%B3n-v1.1-59CBE8)](CHANGELOG.md)
 ![Estado](https://img.shields.io/badge/estado-estable-59CBE8)
-![Probado en](https://img.shields.io/badge/probado%20en-Outlook%20%C2%B7%20Gmail%20%C2%B7%20Yahoo%20%C2%B7%20iOS-59CBE8)
-![Ancho](https://img.shields.io/badge/ancho-360%20px-59CBE8)
 ![Hecho con](https://img.shields.io/badge/hecho%20con-Claude%20Opus%205-59CBE8)
 [![Licencia](https://img.shields.io/badge/licencia-CC%20BY%204.0-59CBE8)](https://creativecommons.org/licenses/by/4.0/deed.es)
 
@@ -50,6 +48,7 @@ investigación** (la que lleva logotipo de la unidad).
 A_UPV_no_foto_azul_VGB_v1.htm          la firma
 A_UPV_no_foto_azul_VGB_archivos/       las seis imágenes, ya al tamaño final
 README.md                              este archivo
+CHANGELOG.md                           registro de cambios
 ```
 
 Las imágenes van **al tamaño exacto al que se muestran**, porque el editor de
@@ -79,18 +78,23 @@ cambiar en el HTML las dos apariciones de `#59CBE8` por `#FFD100`.
 
 ## Cómo adaptarla a tus datos
 
-Abre el `.htm` en un editor de texto y busca las marcas `[CAMBIAR]`. Son diez:
+Abre el `.htm` en un editor de texto y busca las marcas `[CAMBIAR]`. Son nueve:
 
 1. **Nombre** (10,5 pt, `#555555`).
 2. **Cargo** (9 pt negrita, `#5A5A5A`).
-3. **Web o correo** (9 pt, `#333333`) — la norma pone aquí el correo; yo
+3. **Web o correo** (9 pt, `#333333`). La norma pone aquí el correo; yo
    prefiero la web, porque quien recibe un correo mío ya sabe mi dirección.
-4. **Teléfono** y 5. **extensión** (9 pt, `#666666`).
+4. **Teléfono** (9 pt, `#666666`).
+5. **Extensión** (9 pt, `#666666`).
 6. **Unidad** (9 pt, `#4D4D4D`).
 7. **Edificio** y enlace al plano (9 pt, `#666666`). Puedes eliminar el enlace
    si quieres. A mí me parecía útil proporcionar esa información como link.
-8. **Logotipo de la unidad**, 9. **iconos y enlaces** de redes sociales.
-10. **Universitat Politècnica de València** (8,5 pt, `#29282B`) — no se cambia.
+8. **Logotipo de la unidad** (máx. 140 × 50 px).
+9. **Iconos y enlaces** de redes sociales (13 px de alto, máximo cinco).
+
+La línea **Universitat Politècnica de València** (8,5 pt, `#29282B`) no lleva
+marca porque no se cambia: es la única que la norma fija igual para todo el
+mundo.
 
 Los colores y los cuerpos de letra están medidos sobre el PDF normativo. El
 realce del correo, la web y el nombre de la universidad **no es negrita**: en el
@@ -126,11 +130,83 @@ G = (152 − suma alturas izquierda + 5,14) / número de huecos    (G ≥ 5 px)
 ```
 
 y escribe el resultado en las tres filas separadoras (`height` en puntos, que
-son píxeles × 0,75). Si la izquierda pasara a ser más alta que 152 px, fija
-`G = 5 px` y reparte el sobrante en los dos huecos de la derecha manteniendo su
-proporción oficial: 0,375 y 0,625 del total.
+son píxeles × 0,75).
+
+**Si la columna alta pasa a ser la izquierda**, no repartas el sobrante entre
+los dos huecos de la derecha: no es lo que hace la norma. Midiendo los modelos
+del PDF que llevan logotipo se ve que el hueco entre los iconos y el grafo se
+mantiene siempre entre 25 y 30 px, y que **todo el sobrante va al hueco entre el
+logotipo y los iconos**:
+
+| modelo del PDF | alto del logotipo | logotipo → iconos | iconos → grafo |
+|---|---|---|---|
+| plantilla escuelas | 50,0 px | 15,4 px | 26,7 px |
+| ejemplo Telecom | 47,4 px | 15,4 px | 29,6 px |
+| ejemplo Ing. Rural | 37,3 px | 25,5 px | 29,6 px |
+| ejemplo VRAIN | 25,0 px | 37,8 px | 29,6 px |
+| ejemplo Caminos | 19,6 px | 43,4 px | 29,6 px |
+| centro ICCP | 19,5 px | 40,2 px | 26,7 px |
+
+Dicho de otro modo: **logotipo pegado arriba, grafo pegado abajo, iconos a unos
+27 px del grafo, y el aire sobrante entre el logotipo y los iconos**. Cuanto más
+bajo es el logotipo, mayor es ese hueco. Fija entonces `G = 5 px` en la
+izquierda y dale al hueco logotipo → iconos el valor
+`alto visual izquierdo − alto del logotipo − 13 − 27 − 49`.
+
+En la columna izquierda, en cambio, la norma no sigue una regla estricta para
+repartir su propio sobrante: en la plantilla base los huecos quedan
+aproximadamente iguales, mientras que en el ejemplo del VRAIN —que tiene una
+línea menos— casi todo el aire se acumula en un solo hueco, el que precede a
+«Edificio» (46 px, frente a los 23,5 px del ejemplo de Caminos). Repartirlo a
+partes iguales, como hace esta firma, es la lectura más regular de la norma.
 
 Todo esto está también, en detalle, en los comentarios del propio HTML.
+
+### Si prefieres no poner el logotipo de tu unidad
+
+La norma solo lleva logotipo en las plantillas de escuelas, facultades, unidades
+docentes y de investigación. Si no es tu caso, o prefieres no ponerlo, hay que
+quitar del HTML **dos filas de la tabla derecha**: la del logotipo y la fila
+separadora de 15 px que va justo debajo. La tabla sigue siendo válida, porque
+los anchos de columna los definen las demás filas.
+
+Sin el logotipo, la columna derecha se queda en 13 (iconos) + hueco + 49
+(grafo), y **la columna alta pasa a ser la izquierda**: con el contenido de esta
+firma y los huecos al mínimo (`G = 5 px`) mide 133 + 15 − 5,14 = **142,9 px** de
+alto visual.
+
+Lo que hace la norma en ese caso es lo mismo que con logotipo, pero con un
+elemento menos: **los iconos se quedan arriba y el grafo abajo, y el hueco entre
+ellos es el que crece**. Medido sobre los modelos del PDF que no llevan
+logotipo:
+
+| modelo del PDF sin logotipo | iconos → grafo |
+|---|---|
+| firma base (400 px), máxima (440 px) y sin foto (360 px) | 24,8 px |
+| campus de Gandia y de Alcoy | 55,6 px |
+| unidades internas | 66,5 px |
+
+Así que el ajuste es directo: deja los iconos donde están —arriba, alineados con
+la primera línea de texto, conservando el `padding-top:1.875pt` de la celda
+derecha— y dale al único hueco que queda el valor
+
+```
+hueco iconos → grafo = alto visual izquierdo − 13 − 49
+```
+
+Un aviso: si ese hueco te sale muy por encima de los 66 px que marca el modelo
+más estirado de la norma, es señal de que el bloque izquierdo tiene demasiado
+contenido para una firma sin logotipo. Con el contenido íntegro de esta firma
+saldrían 89,9 px, que es excesivo. La propia norma indica el camino: en los
+modelos sin logotipo, el bloque izquierdo tampoco lleva el nombre de la unidad,
+porque esa línea viaja con el logotipo. Quitando esa fila, la izquierda queda en
+14 (correo) + 5 (hueco corto) + 14 (Tel) + 14 (Ext) + 18 (edificio) +
+26 (universidad) = 91 px más **dos** huecos; con `G = 5 px` son **95,9 px**, y
+el hueco entre iconos y grafo sale de **34 px** (25,5 pt), justo en mitad del
+rango que usa la norma.
+
+Y una consecuencia práctica: al montarla en Outlook serán **cinco imágenes y
+cuatro enlaces**, no seis y cinco.
 
 ---
 
