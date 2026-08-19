@@ -12,7 +12,7 @@ suelto, fuera del repositorio.
 
 ---
 
-## [1.1] – 2026-08-17
+## [1.1] – 2026.08.19
 
 ### Cambiado
 
@@ -57,7 +57,7 @@ suelto, fuera del repositorio.
 
 ---
 
-## [1.0] – 2026-08-17
+## [1.0] – 2026.08.17
 
 Primera publicación. Firma correspondiente al modelo «firma base sin foto»
 (360 px) combinado con la plantilla de personal de escuelas, facultades,

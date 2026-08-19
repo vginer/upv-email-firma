@@ -5,7 +5,7 @@
      UPV. -->
 
 [![Último cambio](https://img.shields.io/github/last-commit/vginer/upv-email-firma?label=%C3%BAltimo%20cambio&color=59CBE8)](https://github.com/vginer/upv-email-firma/commits)
-[![Versión](https://img.shields.io/badge/versi%C3%B3n-v1.1-59CBE8)](CHANGELOG.md)
+[![Versión](https://img.shields.io/github/v/release/vginer/upv-email-firma?label=versi%C3%B3n&color=59CBE8)](CHANGELOG.md)
 ![Estado](https://img.shields.io/badge/estado-estable-59CBE8)
 ![Hecho con](https://img.shields.io/badge/hecho%20con-Claude%20Opus%205-59CBE8)
 [![Licencia](https://img.shields.io/badge/licencia-CC%20BY%204.0-59CBE8)](https://creativecommons.org/licenses/by/4.0/deed.es)
